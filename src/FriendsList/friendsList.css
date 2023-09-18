@@ -1,0 +1,30 @@
+.friends-list {
+  list-style: none;
+}
+
+.friends-list__item {
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  margin: 28px 0;
+  padding: 15px;
+}
+
+.friends-list__item-isOnline {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.friends-list__item-avatar {
+  width: 100px;
+  margin-left: 16px;
+}
+
+.friends-list__item-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 12px;
+}

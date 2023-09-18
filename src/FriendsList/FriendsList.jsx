@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./friendsList.css";
 
 const getOnlineColor = (isOnline) => {
   const red = "#FF0000";
