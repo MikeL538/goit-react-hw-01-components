@@ -6,8 +6,8 @@ import FriendsList from "./FriendsList";
 import TransactionHistory from "./TransactionHistory";
 import userData from "./Data/user.json";
 import statisticsDataSource from "./Data/data.json";
-import friendsData from "./Data/friends.json";
-import transactionData from "./Data/transactions.json";
+import friendsDataSource from "./Data/friends.json";
+import transactionDataSource from "./Data/transactions.json";
 
 export default function App() {
   return (
@@ -20,8 +20,8 @@ export default function App() {
         stats={userData.stats}
       />
       <Statistics statisticsData={statisticsDataSource} />
-      <FriendsList friendsData={friendsData} />
-      <TransactionHistory transactionData={transactionData} />
+      <FriendsList friendsData={friendsDataSource} />
+      <TransactionHistory transactionData={transactionDataSource} />
     </>
   );
 }
