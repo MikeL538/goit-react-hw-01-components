@@ -1,32 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./friendsList.css";
-
-const getOnlineColor = (isOnline) => {
-  const red = "#FF0000";
-  const green = "#00FF00";
-
-  return isOnline ? green : red;
-};
+import css from "./friendsList.module.css";
+import FriendsListItem from "./FriendsListItem";
 
 const FriendsList = ({ friendsData }) => {
   return (
-    <ul className="friends-list">
+    <ul className={css.friends__list}>
       {friendsData.map((friend) => (
-        <li className="friends-list__item" key={friend.id}>
-          <span
-            style={{ backgroundColor: getOnlineColor(friend.isOnline) }}
-            className="friends-list__item-isOnline"
-          >
-            {friend.isOnline}
-          </span>
-          <img
-            className="friends-list__item-avatar"
-            src={friend.avatar}
-            alt={`${friend.name}'s avatar`}
-          ></img>
-          <span className="friends-list__item-name">{friend.name}</span>
-        </li>
+        <FriendsListItem key={friend.id} friend={friend} />
       ))}
     </ul>
   );

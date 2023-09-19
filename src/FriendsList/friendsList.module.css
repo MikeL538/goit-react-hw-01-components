@@ -1,8 +1,8 @@
-.friends-list {
+.friends__list {
   list-style: none;
 }
 
-.friends-list__item {
+.friends__list__item {
   align-items: center;
   background-color: #fafafa;
   border-radius: 8px;
@@ -11,19 +11,19 @@
   padding: 15px;
 }
 
-.friends-list__item-isOnline {
+.friends__list__itemIsOnline {
   width: 25px;
   height: 25px;
-  background-color: red;
+  background-color: #ff0000;
   border-radius: 50%;
 }
 
-.friends-list__item-avatar {
+.friends__list__itemAvatar {
   width: 100px;
   margin-left: 16px;
 }
 
-.friends-list__item-name {
+.friends__list__itemName {
   font-size: 24px;
   font-weight: 700;
   margin-left: 12px;

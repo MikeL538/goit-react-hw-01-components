@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./statistics.css";
+import css from "./statistics.module.css";
 
 const getRandomColor = () => {
   const letters = "0123456789ABCDEF";
@@ -12,20 +12,23 @@ const getRandomColor = () => {
   return color;
 };
 
-const Statistics = ({ statisticsData }) => {
+const Statistics = ({ statisticsData, statisticsTitle }) => {
   return (
-    <div className="statistics">
-      <h2 className="statistics__title">Upload stats</h2>
+    <div className={css.statistics}>
+      {statisticsTitle && (
+        <h2 className={css.statistics__title}>{statisticsTitle}</h2>
+      )}
+      {/* <h2 className="statistics__title">Upload stats</h2> */}
 
-      <ul className="statistics__stat-list">
+      <ul className={css.statistics__statList}>
         {statisticsData.map((statistic) => (
           <li
-            className="statistics__item"
+            className={css.statistics__item}
             key={statistic.id}
             style={{ backgroundColor: getRandomColor() }}
           >
-            <span className="statistics__label">{statistic.label} </span>
-            <span className="statistics__percentage">
+            <span className={css.statistics__label}>{statistic.label} </span>
+            <span className={css.statistics__percentage}>
               {statistic.percentage}%
             </span>
           </li>
@@ -43,6 +46,7 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
     })
   ).isRequired,
+  statisticsTitle: PropTypes.string,
 };
 
 export default Statistics;

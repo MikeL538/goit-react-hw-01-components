@@ -1,0 +1,39 @@
+.statistics {
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.statistics__title {
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.statistics__statList {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.statistics__item {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  height: 70px;
+  justify-content: center;
+  min-width: 100px;
+  width: 100%;
+}
+
+.statistics__item:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.statistics__item:last-child {
+  border-bottom-right-radius: 8px;
+}

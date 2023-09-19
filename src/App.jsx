@@ -19,7 +19,10 @@ export default function App() {
         avatar={userData.avatar}
         stats={userData.stats}
       />
-      <Statistics statisticsData={statisticsDataSource} />
+      <Statistics
+        statisticsData={statisticsDataSource}
+        statisticsTitle={"Upload Stats"}
+      />
       <FriendsList friendsData={friendsDataSource} />
       <TransactionHistory transactionData={transactionDataSource} />
     </>
